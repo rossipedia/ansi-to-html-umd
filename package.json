@@ -1,6 +1,6 @@
 {
   "name": "ansi-to-html-umd",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Convert ansi escaped text streams to html.",
   "engines": { "node": "*" },
   "main": "lib/ansi_to_html.umd.js",
@@ -39,6 +39,7 @@
   "license":  "MIT",
   "devDependencies": {
     "chai": "~3.5.0",
+    "entities": "^1.1.1",
     "grunt": "~0.4.5",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-watch": "~0.6.1",
@@ -47,9 +48,5 @@
     "json-loader": "^0.5.4",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
-  },
-  "dependencies": {
-    "entities": "^1.1.1",
-    "karg": "^1.0.4"
   }
 }
