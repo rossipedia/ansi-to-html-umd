@@ -1,9 +1,9 @@
 {
-  "name": "ansi-to-html",
+  "name": "ansi-to-html-umd",
   "version": "0.4.1",
   "description": "Convert ansi escaped text streams to html.",
-  "main": "lib/ansi_to_html.js",
   "engines": { "node": "*" },
+  "main": "lib/ansi_to_html.umd.js",
   "scripts": {
     "test": "grunt simplemocha"
   },
@@ -32,6 +32,9 @@
   }, {
     "name": "Yoram Grahame",
     "email": "yoz@yoz.com"
+  }, {
+    "name": "Bryan Ross",
+    "email": "bryan@rossipedia.com"
   }],
   "license":  "MIT",
   "devDependencies": {
@@ -39,13 +42,14 @@
     "grunt": "~0.4.5",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-simple-mocha": "~0.4.1"
+    "grunt-simple-mocha": "~0.4.1",
+    "grunt-webpack": "^1.0.11",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "entities": "^1.1.1",
     "karg": "^1.0.4"
-  },
-  "bin": {
-    "ansi-to-html": "./bin/ansi-to-html"
   }
 }

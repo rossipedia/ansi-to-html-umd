@@ -1,9 +1,13 @@
 /*global module:false*/
+var path = require('path');
+var webpackConfig = require('./webpack.config');
+
 module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-simple-mocha');
+	grunt.loadNpmTasks('grunt-webpack');
 
 	// Project configuration.
 	grunt.initConfig({
@@ -28,9 +32,13 @@ module.exports = function(grunt) {
 		watch: {
 			files: ['src/**/*.coffee', 'test/**/*.coffee'],
 			tasks: 'default'
+		},
+		webpack: {
+			all: webpackConfig
 		}
 	});
 
 	// Default task.
-	grunt.registerTask('default', ['coffee', 'simplemocha']);
+	grunt.registerTask('default', ['coffee', 'simplemocha', 'webpack']);
 };
+
